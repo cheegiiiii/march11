@@ -1,7 +1,8 @@
 import time
-
 while True:
+    
     a = int(input("1. Show students \n2. Add student \n3. Update student \n4. Delete student \n5. Exit \nChoose: "))
+    
     if a == 1:
         with open("students.txt", "r") as file:
             print(file.read())
@@ -39,6 +40,7 @@ while True:
                 if not line.startswith(e):
                     file.write(line)
         print("Successfully deleted!")
+        
     elif a ==5:
         break
     time.sleep(2)

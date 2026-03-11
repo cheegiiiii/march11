@@ -28,7 +28,9 @@ while True:
             lines = file.readlines()
         updated_lines = []
         for line in lines:
-            if line.startswith(g):
+            idnum, fname, lname, email, pnum = line.strip().split(",")
+
+            if idnum == g:
                 updated_lines.append(f"{h}, {i}, {j}, {k}, {l}\n")
             else:
                 updated_lines.append(line)
